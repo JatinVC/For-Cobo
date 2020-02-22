@@ -1,6 +1,6 @@
 import numpy as np
 
-def initArr(row, col):
+def initArray(row, col):
     sumPosCount = 0
     initedArr = np.random.randint(-10,10,(row+1, col+1))
     #adding row and column for sum
@@ -13,7 +13,7 @@ def initArr(row, col):
         elif initedArr[row, i]>-1:
             sumPosCount+=1
     if (sumPosCount == ((row*2)-1)):
-        return initArr(row, col)
+        return initArray(row, col)
     return initedArr
 
 def updateSums(arr, row, col):
